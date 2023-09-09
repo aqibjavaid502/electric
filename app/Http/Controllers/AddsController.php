@@ -16,7 +16,7 @@ class AddsController extends Controller
     public function index()
     {
 
-        return view('adds/index'); // Pass the $posts variable to the view
+        return view('adds/index'); // aqib Pass the $posts variable to the view
     }
     public function indexhello()
     {
