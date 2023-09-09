@@ -20,30 +20,30 @@
 </head>
 
 <style>
-@media (max-width: 767px) {
-    .pb_cover,
-    .pb_cover_v1,
-    .pb_cover_v2,
-    .pb_cover_v3,
-    .pb_cover_v4 {
-        text-align: center !important;
-        padding: 0 !important;
-    }
-    
-    .pb_cover > .container > .row,
-    .pb_cover_v1 > .container > .row,
-    .pb_cover_v2 > .container > .row,
-    .pb_cover_v3 > .container > .row,
-    .pb_cover_v4 > .container > .row {
-        height: inherit;
-        padding: 0 !important;
-    }
+    @media (max-width: 767px) {
 
-    .pb_btn-pill{
-        margin: 10px !important;
-    }
-}
+        .pb_cover,
+        .pb_cover_v1,
+        .pb_cover_v2,
+        .pb_cover_v3,
+        .pb_cover_v4 {
+            text-align: center !important;
+            padding: 0 !important;
+        }
 
+        .pb_cover>.container>.row,
+        .pb_cover_v1>.container>.row,
+        .pb_cover_v2>.container>.row,
+        .pb_cover_v3>.container>.row,
+        .pb_cover_v4>.container>.row {
+            height: inherit;
+            padding: 0 !important;
+        }
+
+        .pb_btn-pill {
+            margin: 10px !important;
+        }
+    }
 </style>
 
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
@@ -266,29 +266,29 @@
             </div>
         </div>
     </section>
-        <!-- ENDs ection -->
-        
-        <!-- END section -->
-        <footer class="pb_footer bg-light" role="contentinfo">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col">
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <p class="pb_font-14">&copy; © 2023 All Rights Reserved By<br> <a href="#">Emergency
-                                Electrician</a>
-                        </p>
-                    </div>
+    <!-- ENDs ection -->
+
+    <!-- END section -->
+    <footer class="pb_footer bg-light" role="contentinfo">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="p-2"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+            <div class="row">
+                <div class="col text-center">
+                    <p class="pb_font-14">&copy; © 2023 All Rights Reserved By<br> <a href="#">Emergency
+                            Electrician</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
@@ -301,5 +301,29 @@
     toastr.success("{{ $message }}");
 </script>
 @endif
+<script>
+    ! function(t, e) {
+        var o, n, p, r;
+        e.__SV || (window.posthog = e, e._i = [], e.init = function(i, s, a) {
+            function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function() {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }(p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+            var u = e;
+            for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function(t) {
+                    var e = "posthog";
+                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                }, u.people.toString = function() {
+                    return u.toString(1) + ".people (stub)"
+                }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+            e._i.push([i, s, a])
+        }, e.__SV = 1)
+    }(document, window.posthog || []);
+    posthog.init('phc_4Jo9mSectRb1hGxwr6S7spEXq7yI6rM9pZ70WdDxeMQ', {
+        api_host: 'https://eu.posthog.com'
+    })
+</script>
 
 </html>

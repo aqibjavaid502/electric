@@ -217,7 +217,7 @@
             </a>
 
         </div>
-    </nav> --> 
+    </nav> -->
 
 
     </header>
@@ -253,16 +253,16 @@
                             electricians are available around the clock, ready to assist you whenever you need us.</p>
                         <!-- <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="#section-pricing"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">Request Service</span></a></p> -->
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </section>
-    
+
     @include('adds.form2')
     <!-- END nav -->
-   
+
     <!-- Section 222222222222222222222222222 -->
-    
+
 
     <!-- END section  -->
     <section class="pb_section bg-light pb_slant-white pb_pb-250" id="section-features">
@@ -493,6 +493,38 @@
             changeURLButton.disabled = true;
         }
     }
+</script>
+<script>
+    ! function(t, e) {
+        var o, n, p, r;
+        e.__SV || (window.posthog = e, e._i = [], e.init = function(i, s, a) {
+            function g(t, e) {
+                var o = e.split(".");
+                2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function() {
+                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }(p = t.createElement("script")).type = "text/javascript", p.async = !0, p.src = s.api_host + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+            var u = e;
+            for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function(t) {
+                    var e = "posthog";
+                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                }, u.people.toString = function() {
+                    return u.toString(1) + ".people (stub)"
+                }, o = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+            e._i.push([i, s, a])
+        }, e.__SV = 1)
+
+    }(document, window.posthog || []);
+    posthog.init('phc_4Jo9mSectRb1hGxwr6S7spEXq7yI6rM9pZ70WdDxeMQ', {
+        api_host: 'https://eu.posthog.com'
+    })
+// api code to fetch location against ip address
+    fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            fetch(`http://ip-api.com/json/${data.ip}`).then(response => response.json())
+                .then(data => console.log(data))
+        })
 </script>
 <script>
     @if(Session::has('message'))
