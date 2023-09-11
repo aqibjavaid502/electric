@@ -25,7 +25,6 @@ class PostcodeController extends Controller
         $user = User::find(auth()->id());
         $validatedData = $request->validated();
         
-        $user->notify(new QuoteGenerated( $validatedData));
         $url = 'https://api.postcodes.io/postcodes/' . $validatedData['postcode'];
         
     
@@ -38,6 +37,7 @@ class PostcodeController extends Controller
             // Process the response data as needed
             $statusCode = $response->getStatusCode();
             $responseData = $response->getBody()->getContents();
+            $user->notify(new QuoteGenerated( $validatedData, $responseData));
             // Save the response data in the 'api_response' field
            PostcodeArea::create([
                 'postcode' => $validatedData['postcode'],
