@@ -33,4 +33,10 @@ return [
     'postcodes' => [
         'url' => env('POSTCODES_URL', 'https://api.postcodes.io/')
     ],
+
+    'pushover' => [
+        'token' => env('PUSHOVER_API_TOKEN'),
+        'user' => env('PUSHOVER_USER_KEY'),
+    ],
+    
 ];

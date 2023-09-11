@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '309f580287073c4fae9b4d40f241f9b708fee47d',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -165,15 +165,6 @@
             'install_path' => __DIR__ . '/../fruitcake/laravel-cors',
             'aliases' => array(),
             'dev_requirement' => false,
-        ),
-        'fzaninotto/faker' => array(
-            'pretty_version' => 'v1.9.2',
-            'version' => '1.9.2.0',
-            'reference' => '848d8125239d7dbf8ab25cb7f054f1a630e68c2e',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../fzaninotto/faker',
-            'aliases' => array(),
-            'dev_requirement' => true,
         ),
         'graham-campbell/result-type' => array(
             'pretty_version' => 'v1.1.1',
@@ -421,6 +412,15 @@
                 0 => '*',
             ),
         ),
+        'laravel-notification-channels/pushover' => array(
+            'pretty_version' => '3.1.0',
+            'version' => '3.1.0.0',
+            'reference' => '27b6fa5e20044d2e9984b669b7f48846a4009d75',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel-notification-channels/pushover',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'laravel/framework' => array(
             'pretty_version' => 'v8.83.27',
             'version' => '8.83.27.0',
@@ -431,9 +431,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '309f580287073c4fae9b4d40f241f9b708fee47d',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -817,8 +817,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(

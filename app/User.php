@@ -2,9 +2,10 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use NotificationChannels\Pushover\PushoverReceiver;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
@@ -56,5 +57,13 @@ class User extends Authenticatable
     public function company()
     {
         return $this->belongsTo(Company::class);
+    }
+
+    public function routeNotificationForPushover() {
+        return PushoverReceiver::withUserKey('upuwm3s42nbu9rtj3y4m423dobjxxz')
+            ->toDevice('iphone')
+            ->toDevice('desktop')
+            // or, if you prefer:
+            ->toDevice(['iphone', 'desktop']);
     }
 }

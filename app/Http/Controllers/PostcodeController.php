@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Electrician;
-use App\Http\Requests\PostCodeRequest;
 use App\PostcodeArea;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use App\Notifications\QuoteGenerated;
+use App\Http\Requests\PostCodeRequest;
 use JustSteveKing\LaravelPostcodes\Service\PostcodeService;
 
 class PostcodeController extends Controller
@@ -20,7 +22,10 @@ class PostcodeController extends Controller
 
     public function checkAvailability(PostCodeRequest $request)
     {
+        $user = User::find(auth()->id());
         $validatedData = $request->validated();
+        
+        $user->notify(new QuoteGenerated( $validatedData));
         $url = 'https://api.postcodes.io/postcodes/' . $validatedData['postcode'];
         
     
